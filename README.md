@@ -12,7 +12,7 @@ Kuva 2, JSON-datan tuominen Lakehousista Spark-dataframeksi ja datan muokkaus ra
 
 **Raportointi**
 
-Raportoinnin tarkoituksena oli luoda yleiskatsaus PRH:n dataan ja tuoda esille mielestäni mielenkiintoisia trendejä/havaintoja. Toteutuksen aloitin tunnistamalla mielenkiintoiset faktat - ja dimensiot ja luomalla mittarit sekä semanttisen tietomallin. Pidin myös tärkeänä, että raportin visualisointeja pystyi suodattamaan maantieteellisesti, joten toin raportille mukaan maakunta - ja kunta suodatuksen hyödyntämällä PRH_n datassa olevaa yrityksen osoitetta. Mielenkiintoisiksi asioiksi nousi itselläni taloudelliset vaikeudet, mitkä sain laskemalla yritysten tekemistä julkaisuista (Konkurssi, saaneeraus yms) sekä yritysten määrä toimialan mukaan historiallisesti. Toteutin myös raportille oman teeman. 
+Raportoinnin tarkoituksena oli luoda yleiskatsaus PRH:n dataan ja tuoda esille mielestäni mielenkiintoisia trendejä/havaintoja. Toteutuksen aloitin tunnistamalla mielenkiintoiset faktat - ja dimensiot ja luomalla mittarit sekä semanttisen tietomallin. Pidin myös tärkeänä, että raportin visualisointeja pystyi suodattamaan maantieteellisesti, joten toin raportille mukaan maakunta - ja kunta suodatuksen hyödyntämällä PRH:n datassa olevaa yrityksen osoitetta. Mielenkiintoisiksi asioiksi nousi itselläni taloudelliset vaikeudet, mitkä sain laskemalla yritysten tekemistä julkaisuista (Konkurssi, saaneeraus yms) sekä yritysten määrä toimialan mukaan historiallisesti. Toteutin myös raportille oman teeman. 
 
 Kuva 3, Tietojoukko
 <img width="1572" height="921" alt="image" src="https://github.com/user-attachments/assets/95fb3d8e-7d77-48aa-8172-23bbd4805f0c" />
