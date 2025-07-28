@@ -1,8 +1,8 @@
-** Datan tuominen ja käsittely **
+**Datan tuominen ja käsittely**
 
-Tämän projektin tarkoituksena oli visualisoida Patentti - ja Rekisterihallituksen (PRH) suomalaisiin yrityksiin liittyvä data Power BI:n avulla. Datalähteenä toimii PRH:n rajapinta (https://avoindata.prh.fi/fi/ytj/swagger-ui) sekä tilastokeskuksen avoin data, mistä esimerkiksi toin yritysmuodot. 
+Tämän projektin tarkoituksena oli visualisoida Patentti - ja Rekisterihallituksen (PRH) data Power BI:n avulla. Data liittyy suomalaisiin yrityksiin sekä yritysten tekemiin julkaisuihin. Datalähteenä toimii PRH:n rajapinta (https://avoindata.prh.fi/fi/ytj/swagger-ui) sekä tilastokeskuksen avoin data, mistä esimerkiksi toin yritysmuodot.
 
-Datan saa datalähteestä JSON-muodossa, joten päätin hyödyntää Fabricin eri ominaisuuksia datan tuomista varten. Lopullinen ratkaisu oli Fabric dataputki, Lakehouse sekä Notebookit. Tuon kaiken datan batcheina dataputkella Lakehousiin rajapinnasta ja sitten räjäytän auki sekä muokkaan tauluiksi JSON-datan eri hierarkian osiot Notebookeilla. 
+Datan saa datalähteestä JSON-muodossa, joten päätin hyödyntää Fabricin eri ominaisuuksia datan tuomista varten. Lopullinen ratkaisu oli Fabric dataputki, Lakehouse sekä Notebookit. Tuon kaiken saatavilla olevan datan dataputkella Lakehousiin PRH:n rajapinnasta ja sitten räjäytän auki sekä muokkaan JSON-datan eri hierarkian osiot notebookeilla rakenteelliseksi dataksi. 
 
 Kuva 1, ETL Data-arkkitehtuuri 
 <img width="1525" height="983" alt="image" src="https://github.com/user-attachments/assets/efc4c576-aab0-4730-85b9-f61b7ef19a42" />
@@ -12,7 +12,7 @@ Kuva 2, JSON-datan tuominen Lakehousista Spark-dataframeksi ja datan muokkaus ra
 
 **Raportointi**
 
-Tarkoituksena oli luoda PBI raportti avoimesta datasta. Tein tämän tunnistamalla pari yksinkertaista faktaa, kuten yritysten määrä ja yritysten määrän muutos sekä tunnitamalla, että mitkä ovat mielenkiintoiset dimensiot datassa. Toteutin tietojoukon, raportille oman teeman sekä 3 erilaista sivua datasta. Lopuksi toteutin raportin verkkoon jaettavaksi
+Raportoinnin tarkoituksena oli luoda yleiskatsaus PRH:n dataan ja tuoda esille mielestäni mielenkiintoisia trendejä/havaintoja. Toteutuksen aloitin tunnistamalla mielenkiintoiset faktat - ja dimensiot ja luomalla mittarit sekä semanttisen tietomallin. Pidin myös tärkeänä, että raportin visualisointeja pystyi suodattamaan maantieteellisesti, joten toin raportille mukaan maakunta - ja kunta suodatuksen hyödyntämällä PRH_n datassa olevaa yrityksen osoitetta. Mielenkiintoisiksi asioiksi nousi itselläni taloudelliset vaikeudet, mitkä sain laskemalla yritysten tekemistä julkaisuista (Konkurssi, saaneeraus yms) sekä yritysten määrä toimialan mukaan historiallisesti. Toteutin myös raportille oman teeman. 
 
 Kuva 3, Tietojoukko
 <img width="1572" height="921" alt="image" src="https://github.com/user-attachments/assets/95fb3d8e-7d77-48aa-8172-23bbd4805f0c" />
